@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const url = "mongodb://localhost:27017/mySecondNew";
+const url = "mongodb://localhost:27017/After";
 const options = {
     promiseLibrary: Promise,
     useUnifiedTopology: true,
@@ -7,5 +7,5 @@ const options = {
 }
 
 mongoose.connect(url, options);
-mongoose.connection.on("connected", () => console.log("[ MongoDB ] is running on 5000"))
-mongoose.connection.on("disconnected", () => console.log("[ MongoDB ] is not running"))
+mongoose.connection.on("connected", () => console.log("[MongoDB] is running on 5000"))
+mongoose.connection.on("disconnected", () => console.log("[MongoDB] is not running"))

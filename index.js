@@ -1,2 +1,0 @@
-require("./mongos");
-require("./server");

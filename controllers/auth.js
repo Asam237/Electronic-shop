@@ -1,7 +1,7 @@
 const users = require("../models/user")
 const bcryptjs = require("bcryptjs")
 
-export const signup = (req, res) => {
+exports.postSignup = (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const password = req.body.password;
@@ -29,7 +29,7 @@ export const signup = (req, res) => {
 }
 
 
-export const login = (req, res) => {
+exports.postLogin = (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
     users.findOne({ email: email })

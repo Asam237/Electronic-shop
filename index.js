@@ -6,7 +6,6 @@ const dotenv = require("dotenv")
 const authRoute = require("./routes/auth")
 const categoryRoute = require("./routes/category")
 const productRoute = require("./routes/product")
-const multer = require("./midleware/multer-config")
 
 dotenv.config()
 
@@ -20,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }));
-app.use("/api/auth", multer, authRoute)
+app.use("/api/auth", authRoute)
 app.use("/api/categories", categoryRoute)
 app.use("/api/products", productRoute)
 

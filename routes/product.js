@@ -1,8 +1,8 @@
 const Product = require("../models/Product")
 const route = require("express").Router()
-const { verifyTokenAndAdmin } = require("./verifyToken")
+const { verifyToken } = require("./verifyToken")
 
-route.post("/", verifyTokenAndAdmin, async (req, res) => {
+route.post("/", verifyToken, async (req, res) => {
     const newProduct = new Product(req.body)
     try {
         const savedProduct = await newProduct.save()

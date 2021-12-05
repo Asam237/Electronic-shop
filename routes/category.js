@@ -1,8 +1,8 @@
 const Category = require("../models/Category")
 const routes = require("express").Router()
-const { verifyTokenAndAdmin } = require("./verifyToken")
+const { verifyToken } = require("./verifyToken")
 
-routes.post("/", verifyTokenAndAdmin, async (req, res) => {
+routes.post("/", verifyToken, async (req, res) => {
     const newCategory = new Category(req.body)
     try {
         const savedCategory = await newCategory.save()

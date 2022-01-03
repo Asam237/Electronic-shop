@@ -15,6 +15,10 @@ const UserSchema = new mongoose.Schema({
     picture: {
         type: String
     },
+    isAdmin: {
+        type: Boolean,
+        default: false
+    },
     userType: {
         type: String,
         enum: ["normal", "admin"],

@@ -34,4 +34,4 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
     }
 })
 
-module.exports = routes
+module.exports = router

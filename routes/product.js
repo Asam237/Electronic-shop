@@ -1,4 +1,4 @@
-const Product = require("../models/Product")
+const Product = require("../models/product")
 const route = require("express").Router()
 const { verifyToken } = require("./verifyToken")
 

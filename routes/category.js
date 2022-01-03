@@ -1,4 +1,4 @@
-const Category = require("../models/Category")
+const Category = require("../models/category")
 const routes = require("express").Router()
 const { verifyToken } = require("./verifyToken")
 

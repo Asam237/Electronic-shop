@@ -12,6 +12,9 @@ const UserSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    picture: {
+        type: String
+    },
     userType: {
         type: String,
         enum: ["normal", "admin"],
